@@ -39,7 +39,6 @@ gulp.task('compile:scss', () => {
 // 模块化打包js
 gulp.task('compile:js', () => {
     return gulp.src('./src/javascripts/**/*.js')
-         console.log(webpack_config)
         .pipe(webpack(webpack_config))
         .pipe(gulp.dest('./dist/javascripts'))
         
