@@ -1,5 +1,13 @@
-.box{
-    width: 100px;
-    height: 100px;
-    background: red;
+
+@import './modules/home';
+
+
+body { 
+    margin: 0px;
+    padding: 0px;
+    background: #fff; 
+    overflow: auto;
+}
+a{
+    text-decoration: none;
 }

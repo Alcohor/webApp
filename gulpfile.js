@@ -41,14 +41,13 @@ gulp.task('compile:js', () => {
     return gulp.src('./src/javascripts/**/*.js')
         .pipe(webpack(webpack_config))
         .pipe(gulp.dest('./dist/javascripts'))
-        
 })
 
 //文件监听
 gulp.task('watch', () => {
     gulp.watch('./src/**/*.html', ['copy:html']);//html文件监听
-    gulp.watch('./src/js/**/*', ['compile:js']);//js文件监听
-    gulp.watch('./src/css/**/*.scss', ['compile:scss']);//scss文件监听
+    gulp.watch('./src/javascripts/**/*', ['compile:js']);//js文件监听
+    gulp.watch('./src/stylesheets/**/*.scss', ['compile:scss']);//scss文件监听
     gulp.watch('./src/static', ['copy:static']);//静态文件监听
 
     watch('src/static', (v) => { // 当src/static中文件变化后执行

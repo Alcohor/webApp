@@ -1,13 +1,14 @@
 const webpack_config={
-    mode:'production',
+    // mode:'production',
+    mode : 'development',
     entry:{
-        path:'./src/js/index.js'//入口文件
+        app: './src/javascripts/app.js'//入口文件
     },
     output:{
         filename:'[name].js'//打包后输出
     },
     module:{
-        rule:[
+        rules:[
             {   test: /\.html$/, // 查找被当作模块引入到js中的后缀名是.html的文件
                 use: 'string-loader' // 利用string-loader来处理它
             },
