@@ -162,7 +162,7 @@ eval("\n\n//# sourceURL=webpack:///./src/javascripts/router/route.js?");
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"<!-- home --><div class=\\\"home-container\\\">    <div class=\\\"header\\\">        <div class=\\\"list-header\\\">            <a href=\\\"javascript\\\" class=\\\"logo\\\">                <img src=\\\"https://rimg.quanzhi.cn/images/logo.png\\\"  alt=\\\"\\\">            </a>            <a href=\\\"javascript\\\" class=\\\"city\\\">                <span>北京</span>            </a>        </div>    </div></div>\"\n\n//# sourceURL=webpack:///./src/javascripts/view/home.html?");
+eval("module.exports = \"<!-- home --><div class=\\\"home-container\\\">    <div class=\\\"header\\\">        <div class=\\\"list-header\\\">            <a href=\\\"javascript:;\\\" class=\\\"logo\\\">                <img src=\\\"https://rimg.quanzhi.cn/images/logo.png\\\"  alt=\\\"\\\">            </a>            <a href=\\\"javascript:;\\\" class=\\\"city\\\">                <span>北京</span>                <i class=\\\"iconfont icon-down\\\"></i>            </a>            <a href=\\\"javascript:;\\\" class=\\\"searchbox\\\">                <input type=\\\"text\\\" placeholder=\\\"职位/公司名称/关键词\\\">                <i class=\\\"iconfont icon-sousuo\\\"></i>            </a>        </div>    </div>    <div class=\\\"main\\\"></div>    <div class=\\\"footer\\\">            </div></div>\"\n\n//# sourceURL=webpack:///./src/javascripts/view/home.html?");
 
 /***/ })
 

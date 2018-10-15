@@ -28,8 +28,31 @@
                 line-height: 1.066667rem;
                 margin-left: .373333rem;
                 color: #b3b3b3;
+                font-size: .373333rem;
+            }
+            .searchbox{
+                float: right;
+                width: 5.44rem;
+                height: 1.066667rem;
+                line-height: 1.066667rem;
+                position: relative;
+                input{
+                    
+                    height: .746667rem;
+                    border: 0;
+                    border-radius: .4rem;
+                    background: #f2f2f2;
+                    padding-left: .8rem;
+                }
+                i{
+                    color: #b3b3b3;
+                    position: absolute;
+                    top: 0;
+                    left: .133333rem;
+                }
             }
         }
     }
+    
 }
 
