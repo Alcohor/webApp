@@ -132,6 +132,41 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _vie
 
 /***/ }),
 
+/***/ "./src/javascripts/controllers/job_controller.js":
+/*!*******************************************************!*\
+  !*** ./src/javascripts/controllers/job_controller.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("\n\n//# sourceURL=webpack:///./src/javascripts/controllers/job_controller.js?");
+
+/***/ }),
+
+/***/ "./src/javascripts/controllers/mine_controller.js":
+/*!********************************************************!*\
+  !*** ./src/javascripts/controllers/mine_controller.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _view_mine_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../view/mine.html */ \"./src/javascripts/view/mine.html\");\n/* harmony import */ var _view_mine_html__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_view_mine_html__WEBPACK_IMPORTED_MODULE_0__);\n\n\nvar render = function render() {\n  document.querySelector('.main').innerHTML = _view_mine_html__WEBPACK_IMPORTED_MODULE_0___default.a;\n  console.log('mine_controller is ok');\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  render: render\n});\n\n//# sourceURL=webpack:///./src/javascripts/controllers/mine_controller.js?");
+
+/***/ }),
+
+/***/ "./src/javascripts/controllers/search_controller.js":
+/*!**********************************************************!*\
+  !*** ./src/javascripts/controllers/search_controller.js ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _view_search_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../view/search.html */ \"./src/javascripts/view/search.html\");\n/* harmony import */ var _view_search_html__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_view_search_html__WEBPACK_IMPORTED_MODULE_0__);\n\n\nvar render = function render() {\n  document.querySelector('.main').innerHTML = _view_search_html__WEBPACK_IMPORTED_MODULE_0___default.a;\n  console.log('search_controller is ok');\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  render: render\n});\n\n//# sourceURL=webpack:///./src/javascripts/controllers/search_controller.js?");
+
+/***/ }),
+
 /***/ "./src/javascripts/router/index.js":
 /*!*****************************************!*\
   !*** ./src/javascripts/router/index.js ***!
@@ -140,7 +175,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _vie
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ \"./node_modules/@babel/runtime/helpers/classCallCheck.js\");\n/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ \"./node_modules/@babel/runtime/helpers/createClass.js\");\n/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _route__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./route */ \"./src/javascripts/router/route.js\");\n/* harmony import */ var _route__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_route__WEBPACK_IMPORTED_MODULE_2__);\n\n\n// 实现路由工具\n\n\nvar Router =\n/*#__PURE__*/\nfunction () {\n  function Router(_ref) {\n    var initial = _ref.initial;\n\n    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Router);\n\n    this.routes = _route__WEBPACK_IMPORTED_MODULE_2__[\"routes\"]; // 路由表\n\n    this.initial = initial || '#/job'; // 默认路由\n    // this.currentUrl = ''; // 记录当前的路径（hash值）\n  }\n\n  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Router, [{\n    key: \"init\",\n    value: function init() {\n      this.initialHash();\n      this.listenHashChange();\n    }\n  }, {\n    key: \"initialHash\",\n    value: function initialHash() {\n      // 初始化hash值\n      // location.hash\n      if (!location.hash) {\n        location.hash = this.initial;\n      }\n\n      ; // this.currentUrl = location.hash;\n    }\n  }, {\n    key: \"switch\",\n    value: function _switch(path) {\n      // 切换路由的方法，方便在js事件等场景调用，需要切换模式的话在这里切换就ok\n      location.hash = path;\n    }\n  }, {\n    key: \"refresh\",\n    value: function refresh() {\n      // 根据当前的路径 来 切换路由\n      var hash = location.hash;\n\n      if (!this.routes[hash]) {\n        // 路由表里没有配置这个路由\n        // 回到默认路由\n        location.hash = this.initial;\n        return false;\n      }\n\n      this.routes[hash].render();\n      this.switchTab();\n    }\n  }, {\n    key: \"switchTab\",\n    value: function switchTab() {\n      // 要求需要根据路由切换而切换active类名的元素，必须加上nav-link类名，并且加上path属性\n      $('.nav-link').each(function (item) {\n        if ($(this).attr('path') === location.hash) {\n          $(this).addClass('active');\n        } else {\n          $(this).removeClass('active');\n        }\n      });\n    }\n  }, {\n    key: \"listenHashChange\",\n    value: function listenHashChange() {\n      // 监听hash值变化的\n      window.addEventListener('load', this.refresh.bind(this)); // 当hash值变化的时候此事件会执行\n\n      window.addEventListener('hashchange', this.refresh.bind(this));\n    }\n  }]);\n\n  return Router;\n}();\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Router);\n\n//# sourceURL=webpack:///./src/javascripts/router/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ \"./node_modules/@babel/runtime/helpers/classCallCheck.js\");\n/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ \"./node_modules/@babel/runtime/helpers/createClass.js\");\n/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _route__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./route */ \"./src/javascripts/router/route.js\");\n\n\n// 实现路由工具\n\n\nvar Router =\n/*#__PURE__*/\nfunction () {\n  function Router(_ref) {\n    var initial = _ref.initial;\n\n    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Router);\n\n    this.routes = _route__WEBPACK_IMPORTED_MODULE_2__[\"routes\"]; // 路由表\n\n    this.initial = initial || '#/job'; // 默认路由\n    // this.currentUrl = ''; // 记录当前的路径（hash值）\n  }\n\n  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Router, [{\n    key: \"init\",\n    value: function init() {\n      this.initialHash();\n      this.listenHashChange();\n    }\n  }, {\n    key: \"initialHash\",\n    value: function initialHash() {\n      // 初始化hash值\n      // location.hash\n      if (!location.hash) {\n        location.hash = this.initial;\n      }\n\n      ; // this.currentUrl = location.hash;\n    }\n  }, {\n    key: \"switch\",\n    value: function _switch(path) {\n      // 切换路由的方法，方便在js事件等场景调用，需要切换模式的话在这里切换就ok\n      location.hash = path;\n    }\n  }, {\n    key: \"refresh\",\n    value: function refresh() {\n      // 根据当前的路径 来 切换路由\n      var hash = location.hash;\n\n      if (!this.routes[hash]) {\n        // 路由表里没有配置这个路由\n        // 回到默认路由\n        location.hash = this.initial;\n        return false;\n      }\n\n      console.log(this.routes);\n      this.routes[hash].render();\n      this.switchTab();\n    }\n  }, {\n    key: \"switchTab\",\n    value: function switchTab() {\n      // 要求需要根据路由切换而切换active类名的元素，必须加上nav-link类名，并且加上path属性\n      $('.nav-link').each(function (item) {\n        if ($(this).attr('path') === location.hash) {\n          $(this).addClass('active');\n        } else {\n          $(this).removeClass('active');\n        }\n      });\n    }\n  }, {\n    key: \"listenHashChange\",\n    value: function listenHashChange() {\n      // 监听hash值变化的\n      window.addEventListener('load', this.refresh.bind(this)); // 当hash值变化的时候此事件会执行\n\n      window.addEventListener('hashchange', this.refresh.bind(this));\n    }\n  }]);\n\n  return Router;\n}();\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Router);\n\n//# sourceURL=webpack:///./src/javascripts/router/index.js?");
 
 /***/ }),
 
@@ -148,10 +183,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _bab
 /*!*****************************************!*\
   !*** ./src/javascripts/router/route.js ***!
   \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: routes */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("\n\n//# sourceURL=webpack:///./src/javascripts/router/route.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"routes\", function() { return routes; });\n/* harmony import */ var _controllers_job_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../controllers/job_controller */ \"./src/javascripts/controllers/job_controller.js\");\n/* harmony import */ var _controllers_job_controller__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_controllers_job_controller__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _controllers_search_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../controllers/search_controller */ \"./src/javascripts/controllers/search_controller.js\");\n/* harmony import */ var _controllers_mine_controller__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../controllers/mine_controller */ \"./src/javascripts/controllers/mine_controller.js\");\n\n\n //页面跳转\n\nvar routes = {\n  '#/job': _controllers_job_controller__WEBPACK_IMPORTED_MODULE_0___default.a,\n  '#/search': _controllers_search_controller__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  '#/mine': _controllers_mine_controller__WEBPACK_IMPORTED_MODULE_2__[\"default\"]\n};\n\n\n//# sourceURL=webpack:///./src/javascripts/router/route.js?");
 
 /***/ }),
 
@@ -162,7 +198,29 @@ eval("\n\n//# sourceURL=webpack:///./src/javascripts/router/route.js?");
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"<!-- home --><div class=\\\"home-container\\\">    <div class=\\\"header\\\">        <div class=\\\"list-header\\\">            <a href=\\\"javascript:;\\\" class=\\\"logo\\\">                <img src=\\\"https://rimg.quanzhi.cn/images/logo.png\\\"  alt=\\\"\\\">            </a>            <a href=\\\"javascript:;\\\" class=\\\"city\\\">                <span>北京</span>                <i class=\\\"iconfont icon-down\\\"></i>            </a>            <a href=\\\"javascript:;\\\" class=\\\"searchbox\\\">                <input type=\\\"text\\\" placeholder=\\\"职位/公司名称/关键词\\\">                <i class=\\\"iconfont icon-sousuo\\\"></i>            </a>        </div>    </div>    <div class=\\\"main\\\"></div>    <div class=\\\"footer\\\">            </div></div>\"\n\n//# sourceURL=webpack:///./src/javascripts/view/home.html?");
+eval("module.exports = \"<!-- home --><div class=\\\"home-container\\\">    <div class=\\\"header\\\">        <div class=\\\"list-header\\\">            <a href=\\\"javascript:;\\\" class=\\\"logo\\\">                <img src=\\\"https://rimg.quanzhi.cn/images/logo.png\\\"  alt=\\\"\\\">            </a>            <a href=\\\"javascript:;\\\" class=\\\"city\\\">                <span>北京</span>                <i class=\\\"iconfont icon-down\\\"></i>            </a>            <a href=\\\"javascript:;\\\" class=\\\"searchbox\\\">                <input type=\\\"text\\\" placeholder=\\\"职位/公司名称/关键词\\\">                <i class=\\\"iconfont icon-sousuo\\\"></i>            </a>        </div>    </div>    <div class=\\\"main\\\"></div>    <div class=\\\"footer\\\">        <a href=\\\"#/job\\\" class=\\\"footer__item nav-link active\\\"><i class=\\\"iconfont icon-gongzuo\\\"></i>工作</a>        <a href=\\\"#/search\\\" class=\\\"footer__item nav-link\\\"><i class=\\\"iconfont icon-record\\\"></i>简历</a>        <a href=\\\"#/mine\\\" class=\\\"footer__item nav-link\\\"><i class=\\\"iconfont icon-mine\\\"></i>我的</a>    </div></div>\"\n\n//# sourceURL=webpack:///./src/javascripts/view/home.html?");
+
+/***/ }),
+
+/***/ "./src/javascripts/view/mine.html":
+/*!****************************************!*\
+  !*** ./src/javascripts/view/mine.html ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"<!DOCTYPE html><html lang=\\\"en\\\"><head>    <meta charset=\\\"UTF-8\\\">    <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">    <meta http-equiv=\\\"X-UA-Compatible\\\" content=\\\"ie=edge\\\">    <title>Document</title></head><body>    mine</body></html>\"\n\n//# sourceURL=webpack:///./src/javascripts/view/mine.html?");
+
+/***/ }),
+
+/***/ "./src/javascripts/view/search.html":
+/*!******************************************!*\
+  !*** ./src/javascripts/view/search.html ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"<!DOCTYPE html><html lang=\\\"en\\\"><head>    <meta charset=\\\"UTF-8\\\">    <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">    <meta http-equiv=\\\"X-UA-Compatible\\\" content=\\\"ie=edge\\\">    <title>Document</title></head><body>    </body></html>\"\n\n//# sourceURL=webpack:///./src/javascripts/view/search.html?");
 
 /***/ })
 
