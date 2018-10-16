@@ -1,7 +1,3 @@
-<<<<<<< 0018887e03f633cfc43612704c5b6115a30eafb0
-=======
-<<<<<<< 0018887e03f633cfc43612704c5b6115a30eafb0
->>>>>>> envrment is already
 # Logs
 logs
 *.log
@@ -63,9 +59,7 @@ typings/
 
 # next.js build output
 .next
-<<<<<<< 0018887e03f633cfc43612704c5b6115a30eafb0
-=======
-=======
+
 node_modules
->>>>>>> envrment is already
->>>>>>> envrment is already
+
+dist
