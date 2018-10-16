@@ -4,11 +4,13 @@
 
 
 body { 
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     background: #fff; 
     overflow: auto;
+    height: 100%;
 }
+#root, .home-container { height: 100%; }
 a{
     text-decoration: none;
 }
