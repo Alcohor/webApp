@@ -31,7 +31,6 @@ gulp.task('copy:html', () => {
 // 处理scss
 gulp.task('compile:scss', () => {
     console.log('handle scss')
-
     setTimeout(() =>{
         return gulp.src('./src/stylesheets/*.scss')
             .pipe(sass(sass_config).on('error', sass.logError))
