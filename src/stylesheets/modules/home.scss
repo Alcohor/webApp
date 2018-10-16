@@ -44,19 +44,23 @@
                 height: 1.066667rem;
                 line-height: 1.066667rem;
                 position: relative;
+                margin-right: .266667rem;
                 input{
-                    
+                    width: 4.666667rem;
                     height: .746667rem;
                     border: 0;
                     border-radius: .4rem;
                     background: #f2f2f2;
                     padding-left: .8rem;
+                    font-size: .373333rem;
+                    
                 }
                 i{
                     color: #b3b3b3;
                     position: absolute;
                     top: 0;
                     left: .133333rem;
+                    font-size: .373333rem;
                 }
             }
         }
@@ -83,9 +87,9 @@
             justify-content: space-between;
             justify-content: center;
             align-items: center;
-            font-size: .186667rem;
+            font-size: .32rem;
             i{
-                font-size: .24rem;
+                font-size: .373333rem;
             }
         }
     }
