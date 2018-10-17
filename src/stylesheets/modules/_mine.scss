@@ -3,9 +3,11 @@
     margin: .266667rem 0 0;
     .loginIfm{
         position: relative;
-        display: flex;
+        display: block;
+        justify-content:space-between;
         padding: .32rem .746667rem .32rem .266667rem;
         .logo{
+            float: left;
             display: block;
             margin-right: .266667rem;
         }
@@ -15,12 +17,14 @@
             line-height: 1.16rem;
             color: #333333;
             font-size: .373333rem;
+            float: left;
         }
         .changePwd{
             color: #b3b3b3;
             font-size: .373333rem;
             line-height: 1.693333rem;
             margin-left: 1.733333rem;
+            float: right;
         }
         .icon-right{
             color: #b3b3b3;
@@ -28,15 +32,60 @@
             font-size: .533333rem;
             line-height: 1.693333rem;
             margin-left: .4rem;
+            float: right;
             
         }
+        .box{
+            clear: both;
+        }
+
     }
 }
 .section{
+    width: 100%;
     background: #ffffff;
     margin: .266667rem 0;
     padding: 0 .266667rem;
     .applyState{
+        position: relative;
+        //display: flex;
+        font-size: .373333rem;
+        line-height: 1.333333rem;
+        color: #b3b3b3;
+        .label{
+            padding-left: .8rem;
+            color: #333333;
+            font-size: .373333rem;
+            i{
+                font-size: .373333rem;
+                position: absolute;
+                color: #19b497;
+                left: 0;
+            }
+        }
+        .select{
+            display: block;
+            width: 5.733333rem;
+            text-align: right;
+            margin-right: .373333rem;
+            float:right;
+        }
+        .icon-right{
+            color: #b3b3b3;
+            font-weight: 500;
+            font-size: .533333rem;
+            margin-right: 1.12rem;
+            float:right;
+        }
+        .select-qz{
+            display: block;
+            width: 4rem;
+            text-align: right;  
+        }
+        
+    }
+
+    .collection{
         position: relative;
         display: flex;
         font-size: .373333rem;
@@ -65,15 +114,46 @@
             margin-left: .4rem;
             
         }
+    }
+    .applyState-job{
+        position: relative;
+        //display: flex;
+        font-size: .373333rem;
+        line-height: 1.333333rem;
+        color: #b3b3b3;
+        .label{
+            padding-left: .8rem;
+            color: #333333;
+            font-size: .373333rem;
+            i{
+                font-size: .373333rem;
+                position: absolute;
+                color: #19b497;
+                left: 0;
+            }
+        }
+        .select{
+            display: block;
+            width:  5.733333rem;
+            text-align: right;
+            margin-right: .373333rem;
+            float:right;
+        }
+        .icon-right{
+            color: #b3b3b3;
+            font-weight: 500;
+            font-size: .533333rem;
+            margin-right: 1.12rem;
+            float:right;
+        }
         .select-qz{
             display: block;
-            width: 4rem;
             text-align: right;  
+            float:right;
+            width: 5.333333rem;
         }
-        
     }
-
-    .collection{
+    .collection-job{
         position: relative;
         display: flex;
         font-size: .373333rem;
