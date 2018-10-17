@@ -1,0 +1,24 @@
+{{#each _job_list}}
+<li class="job-item">
+    <div class="box">
+        <span class="img-contain">
+            <i class="img-font">{{this.ImgFont}}</i>
+        </span>
+    </div>
+    <div class="job-info-contain">
+        <div class="title-box">
+            <h3 class="job-title">{{this.JobTitle}}</h3>
+            <span class="time-bar">{{this.FreshTimeShow}}</span>
+        </div>
+        <div class="com-info-box">
+            <span class="com-name">{{this.ComName}}</span>
+            <span class="com-locat">{{this.WorkPlaceName}}</span>
+        </div>
+        <div class="slr-box">
+            <span class="salary-show">
+                {{this.SalaryShow}}
+            </span>
+        </div>
+    </div>
+</li>
+{{/each}}

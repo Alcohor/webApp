@@ -1,3 +1,0 @@
-const job_list = ()=>{
-   
-}
