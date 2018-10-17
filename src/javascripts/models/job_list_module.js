@@ -10,6 +10,19 @@ const getJobListData = (_pageNO = 1) => {
         })
 }
 
+
+const getScrollImg=()=>{
+
+    return $.ajax({
+        url: `api/src/static/img/img.json`,
+        dataType:"json",
+        success: (res) => {
+            return res;
+        }
+    })
+}
+
+
 const getImgFont= (str)=>{
     
     let num = parseInt(Math.random()*2+3);
