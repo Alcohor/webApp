@@ -5,7 +5,7 @@ import {  routes }  from './route'
 
 
 class Router {
-
+    //initial是传过来的/#job
     constructor ({ initial }) {
         
         this.routes = routes; // 路由表
