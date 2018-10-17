@@ -1,0 +1,91 @@
+.login-logo{
+    height: 3.786667rem;
+    width: 100%;
+    background: url('../../static/img/logo.png') center no-repeat ;
+    background-size: 43%;
+}
+.userlogin{
+    padding: 0 .266667rem;
+    font-size: .373333rem;
+    background: #ffffff;
+    font-size: .373333rem;
+    .switchform{
+        padding: 0 1rem .64rem;
+        background: #ffffff;
+        text-align: center;
+        a{
+            width: 2.666667rem;
+            height: 1.066667rem;
+            line-height: 1.066667rem;
+            display: inline-block;
+            color: #333333;
+            font-size: .426667rem;
+            margin: 0 .266667rem;
+            border: 2px solid transparent;
+        }
+        .login-active{
+            color: #19b497;
+            border-bottom-color: #19b497;
+        }
+        
+    }
+}
+.form-section{
+    padding: 0 .373333rem;
+    background: #ffffff;
+    line-height: 1.333333rem;
+    .form-section-box{
+        display: flex;
+        border-bottom: 1px solid #f4f4f4;
+        span{
+            display: block;
+            font-size: .373333rem;
+            flex: 1;
+            min-width: 2.933333rem;
+        }
+        input{
+            display: block;
+            font-size: .373333rem;
+            flex: 1;
+            min-width: 2.933333rem;
+            text-align: right;
+        }
+        .getCode{
+            display: inline-block;
+            text-align: center;
+            color: #19b497;
+            cursor: pointer;
+
+        }
+        #canvas{
+            float:right;
+            display: inline-block;
+            border:1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 1.733333rem;
+            height: .68rem;
+            margin: .333333rem 0 0 .133333rem;
+        }
+    }
+}
+.loginSubmit{
+    display: block;
+    width: 100%;
+    margin-top: 1.066667rem;
+    height: 1.066667rem;
+    line-height: 1.066667rem;
+    font-size: .426667rem;
+    background: #19b497;
+    color: #ffffff;
+    border-radius: .533333rem;
+}
+.login-remind{
+    font-size: .32rem;
+    line-height: 1.36rem;
+    color: #b3b3b3;
+    text-align: center;
+    a{
+        color: #333333;
+    }
+}

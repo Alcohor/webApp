@@ -1,1 +1,36 @@
-login is ok
+<div class="login-logo"></div>
+<div class="userlogin">
+    <div class="switchform">
+        <a class="login-active" href="#/login">手机验证登录</a>
+        <a class="account-login" href="#/account">账号密码登录</a>
+    </div>
+</div>
+<form id="login-form" action="#">
+    <div class="form-section">
+        <div class="form-section-box">
+            <span>手机</span>
+            <input type="text" placeholder="请输入手机号">
+        </div>
+    </div>
+    <div class="form-section">
+        <div class="form-section-box">
+            <span>图片验证</span>
+            <input class="input-val" type="text" placeholder="请输入图片验证">
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+    <div class="form-section">
+        <div class="form-section-box">
+            <span>验证码</span>
+            <input type="text" placeholder="请输入验证码">
+            <span class="getCode">获取验证码</span>
+        </div>
+    </div>
+    <input class="loginSubmit" type="submit" value="确认">
+    <p class="login-remind">
+        登录即代表同意
+        <a href="https://m.quanzhi.com/user/protocol">
+            《全职招聘网用户协议》
+        </a>
+    </p>
+</form>
