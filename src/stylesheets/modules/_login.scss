@@ -1,0 +1,27 @@
+.login-logo{
+    height: 3.786667rem;
+    width: 100%;
+    background: url('../../static/img/logo.png') center no-repeat ;
+    background-size: 43%;
+}
+.userlogin{
+    padding: 0 .266667rem;
+    font-size: .373333rem;
+    background: #ffffff;
+    font-size: .373333rem;
+    .swithform{
+        padding: 0 1rem .64rem;
+        background: #ffffff;
+        padding: 0 1rem;
+        display: flex;
+        text-align: center;
+        div{
+            width: 3.733333rem;
+            text-align: center;  
+            a{
+                display: inline-block;
+            }
+        }
+        
+    }
+}
