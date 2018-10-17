@@ -1,6 +1,7 @@
 import job_template from '../view/job_page.html'
 import job_list_template from '../view/job_list.html'
 import job_model from '../models/job_list_module'
+import BScroll from 'better-scroll'
 
 
 let _pageNO = 1;
@@ -11,8 +12,7 @@ const render = async()=>{
     $('.main').html(_html);
     swiperInit();
     await getJobListByPageNo();
-    renderJobList()
-
+    handleScroll();  
 }
 
 const swiperInit = ()=>{
@@ -26,7 +26,6 @@ const swiperInit = ()=>{
 //获取某一页数据
 const getJobListByPageNo = async () =>{
     let _job_data = await job_model.getJobListData(_pageNO);
-    
     console.log(_job_data)  
     let _job_list = _job_data.result.list;
     let _com_id = _job_data.result.ids
@@ -36,6 +35,16 @@ const getJobListByPageNo = async () =>{
     });
     console.log(pageDateArr);
 }
+
+//滑动
+const handleScroll = async()=>{
+    let _job_page_scroll = new BScroll('.main',{
+        probeType:2
+    })
+    await renderJobList();//完成joblist渲染后
+    _job_page_scroll.refresh();
+}
+
 
 //页面渲染
 const renderJobList =()=>{
