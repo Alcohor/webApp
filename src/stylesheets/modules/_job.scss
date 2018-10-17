@@ -18,7 +18,9 @@
 
 .job-list-container{
     width: 100%;
+    background-color: #f0f4f7;
     .rank-options-nav{
+        background-color: #fff;
         height: 1.173333rem;
         .nav-container{
             height: 1.173333rem;
@@ -32,7 +34,83 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                i{
+                    font-size: .373333rem;
+                    margin-left: .106667rem;
+                }
             }
+        }
+    }
+    ul.job-list{
+        padding: 0;
+        width: 100%;
+        .job-item{
+            background-color: #fff;
+            margin-top: .266667rem;
+            list-style: none;
+            box-sizing: border-box;
+            padding: .4rem;
+            display: flex;
+            .box{
+                width: 1.6rem;
+                height: 1.6rem;
+                margin-right: .4rem;
+                .img-contain{
+                    display: block;
+                    width: 1.493333rem;
+                    height:  1.493333rem;
+                    background: #f2f2f2;
+                    .img-font{
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        font-weight: 200;
+                        font-style: normal;
+                        font-size: 1.066667rem;
+                        color: #666666;
+                        text-align: center;
+                        line-height: 1.493333rem;
+                    }
+                }
+            }
+            .job-info-contain{
+                .title-box{
+                    display: flex;
+                    margin-bottom: .146667rem;
+                    justify-content: space-between;
+                    .job-title{
+                        display: flex;
+                        margin: 0;
+                        color:#333;
+                        font-weight:500; 
+
+                    }
+                    .time-bar{
+                        line-height: .493333rem;
+                        color: #b3b3b3;
+                    }
+                }
+                .com-info-box{
+                    color: #999;
+                    display: flex;
+                    width: 7.306667rem;
+                    justify-content: space-between;
+                    .com-name{
+                        width: 4.533333rem;
+                        height: .426667rem;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow:ellipsis;
+                        display: block;
+                    }
+                }
+                .slr-box{
+                    .salary-show{
+                        color: #19b497;
+                    }
+                }
+            }
+
         }
     }
 }

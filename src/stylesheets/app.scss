@@ -1,14 +1,18 @@
 
 @import './modules/home';
-@import './modules/job.scss';
+@import './modules/job';
+@import './modules/search';
+@import './modules/mine';
 
 
 body { 
-    margin: 0px;
-    padding: 0px;
-    background: #fff; 
+    margin: 0;
+    padding: 0;
+    background: #f0f4f7;
     overflow: auto;
+    height: 100%;
 }
+#root, .home-container { height: 100%; }
 a{
     text-decoration: none;
 }

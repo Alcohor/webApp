@@ -5,7 +5,7 @@ import {  routes }  from './route'
 
 
 class Router {
-
+    //initial是传过来的/#job
     constructor ({ initial }) {
         
         this.routes = routes; // 路由表
@@ -39,6 +39,7 @@ class Router {
             return false;
         }
         console.log(this.routes);
+        //渲染
         this.routes[hash].render();
         this.switchTab();
     }
