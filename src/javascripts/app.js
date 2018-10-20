@@ -1,7 +1,7 @@
 import Router from './router'
 import home_controller from './controllers/home_controller';
 
-console.log('app.js is ok');
+
 
 // 渲染视图
 home_controller.render();

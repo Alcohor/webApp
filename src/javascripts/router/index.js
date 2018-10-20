@@ -38,7 +38,7 @@ class Router {
             location.hash = this.initial;
             return false;
         }
-        console.log(this.routes);
+       
         //渲染
         this.routes[hash].render();
         this.switchTab();

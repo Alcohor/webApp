@@ -86,9 +86,17 @@ function randomColor() {//得到随机的颜色值
 }
 //验证码结束
 
+//登录验证
+$('account-login').tap(function(){
+    console.log('ok');
+})
+    
+
+
+
  //渲染页面
  document.querySelector('#root').innerHTML = login_template;
- console.log('home_controller is ok');
+ 
 
 }
 
