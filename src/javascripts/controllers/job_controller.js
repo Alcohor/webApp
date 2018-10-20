@@ -107,6 +107,7 @@ const refreshJobList = async () =>{
     console.log(pageDateArr);
 }
 
+
 //页面渲染
 const renderJobList =()=>{
     let _template = Handlebars.compile(job_list_template)
