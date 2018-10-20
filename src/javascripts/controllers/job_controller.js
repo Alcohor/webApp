@@ -13,7 +13,6 @@ const render = async()=>{
     swiperInit();
     await getJobListByPageNo();
     handleScroll();  
-    getScrollImg();
 }
 
 const swiperInit = ()=>{
@@ -23,6 +22,9 @@ const swiperInit = ()=>{
 
     })
 }
+
+let _scroll_bottom_sta = false;
+
 
 //获取某一页数据
 const getJobListByPageNo = async () =>{
@@ -45,7 +47,7 @@ const handleScroll = async()=>{
         pullDownRefresh:true,
         pullDownRefresh:true
     })
-    await renderJobList();//完成joblist渲染后
+     await renderJobList();//完成joblist渲染后
     _job_page_scroll.refresh();
     let pull_down_tip_wrap = $('.tip-wraper');
     let pull_down_tip = $('.tip-wraper span');
@@ -56,6 +58,11 @@ const handleScroll = async()=>{
             refresh_flag=false;
             pull_down_tip.html('松手刷新')
             pull_down_tip_wrap.prop('class','tip-wraper-go')
+        }
+        _scroll_bottom_sta = false;
+        if ( _job_page_scroll.maxScrollY - y > 0 ) {
+            _scroll_bottom_sta = true;
+            console.log( _scroll_bottom_sta)
         }
     })
 
@@ -68,12 +75,23 @@ const handleScroll = async()=>{
                 await refreshJobList();
                 renderJobList();
                 pull_down_tip.html('下拉刷新')
+                refresh_flag=true;
                 pull_down_tip_wrap.prop('class','tip-wraper')
                 _job_page_scroll.refresh()
                 
             }
             _job_page_scroll.scrollTo(0,-160,300)
         }
+        console.log(_job_page_scroll.maxScrollY - y,_scroll_bottom_sta)
+        if(_job_page_scroll.maxScrollY - y == 0 && _scroll_bottom_sta){
+            _pageNO ++;
+            console.log('到底了')
+            await getJobListByPageNo();
+            renderJobList();
+            _job_page_scroll.refresh();
+        }
+
+
     })  
 }
 
