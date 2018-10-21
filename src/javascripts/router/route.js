@@ -6,9 +6,9 @@ import login_controller from '../controllers/login_controller';
 import account_controller from '../controllers/accountLogin_controller';
 import createResume_controller from '../controllers/createResume_controller';
 
-
 //页面跳转
 const routes = {
+    '#/home' : home_controller,
     '#/job' : job_controller,
     '#/search' : search_controller,
     '#/mine' : mine_controller,

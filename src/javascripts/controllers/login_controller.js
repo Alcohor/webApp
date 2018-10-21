@@ -86,9 +86,18 @@ function randomColor() {//得到随机的颜色值
 }
 //验证码结束
 
+//登录切换
+$('.account-login').live('tap',function(){
+  $(this).addClass('login-active').siblings().removeClass('login-active')
+  
+},false)
+    
+
+
+
  //渲染页面
  document.querySelector('#root').innerHTML = login_template;
- console.log('home_controller is ok');
+ 
 
 }
 

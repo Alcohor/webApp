@@ -38,7 +38,7 @@ class Router {
             location.hash = this.initial;
             return false;
         }
-        console.log(this.routes);
+       
         //渲染
         this.routes[hash].render();
         this.switchTab();
@@ -49,6 +49,7 @@ class Router {
         // 要求需要根据路由切换而切换active类名的元素，必须加上nav-link类名，并且加上path属性
         $('.nav-link').each(function (item){
             if ( $(this).attr('path') === location.hash ) {
+                console.log($(this));
                 $(this).addClass('active');
             }else {
                 $(this).removeClass('active');
