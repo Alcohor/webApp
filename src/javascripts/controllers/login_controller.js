@@ -16,6 +16,7 @@ const render = () => {
       var num = show_num.join("");
       if (val == "") {
         alert("请输入验证码！");
+        return false;
       } else if (val == num) {
         alert("提交成功！");
         $(".input-val").val("");
@@ -24,6 +25,7 @@ const render = () => {
         alert("验证码错误！请重新输入！");
         $(".input-val").val("");
         draw(show_num);
+        return false;
       }
     });
   });
@@ -93,27 +95,42 @@ const render = () => {
   //验证码结束
 
   //登录切换
-  $(".account-login").live(
-    "tap",
-    function() {
-      $(this)
-        .addClass("login-active")
-        .siblings()
-        .removeClass("login-active");
-    },
-    false
-  );
+  $(".account-login").live("tap", function() {
+    $(this)
+      .addClass("login-active")
+      .siblings()
+      .removeClass("login-active");
+  });
 
   //登录验证
-  $(".loginSubmit").live("tap", function() {
-    let RegMobile = /^0?(13[0-9]|15[012356789]|18[0123456789]|14[57])[0-9]{8}$/;
-    if (RegMobile.test($(".phone").val())) {
-      $("#login-form").submit();
-    } else {
-      alert("请输入正确的手机号");
-    }
 
-    console.log("loginSubmit is ok");
+  $(".loginSubmit").live("click", function() {
+    //let RegMobile = /^0?(13[0-9]|15[012356789]|18[0123456789]|14[57])[0-9]{8}$/;
+    // if (RegMobile.test($(".phone").val()) || $(".phone").val() != "") {
+    //     router.switch("#/home");
+    //     console.log("ok");
+    // } else {
+    //     alert("请输入正确的手机号");
+    // }
+    // let inputVal = $(".phone").val();
+    // if(inputVal.length == 0){
+    //     alert('手机号不能为空');
+    // }else if(inputVal.length != 11){
+    //     alert('请输入11位手机号码');
+    // }else{
+    //     router.switch("#/home");
+    // }
+    let RegMobile = /^0?(13[0-9]|15[012356789]|18[0123456789]|14[57])[0-9]{8}$/;
+    let inputVal = $(".phone").val();
+    if (inputVal.length == 0) {
+      alert("手机号不能为空");
+    } else if (inputVal.length != 11) {
+      alert("请输入11位手机号码");
+    } else if (!RegMobile.test(inputVal)) {
+      alert("请输入正确的手机号码");
+    } else {
+      router.switch("#/home");
+    }
   });
 
   //渲染页面
