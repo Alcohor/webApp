@@ -43,7 +43,8 @@ const handleScroll = async()=>{
         probeType:2,
         startY:-160,
         pullDownRefresh:true,
-        pullDownRefresh:true
+        pullDownRefresh:true,
+        click: true
     })
     await renderJobList();//完成joblist渲染后
     _job_page_scroll.refresh();
