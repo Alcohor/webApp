@@ -145,5 +145,21 @@
             }
 
         }
+        .load-wrap{
+            height: 2.133333rem;
+            width: 100%;
+            display: flex;
+            .container{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size :30px;
+                i{  margin-left: .08rem;
+                    font-size :40px;
+                    transform: rotate(180deg);
+                } 
+            }
+        }
     }
 }

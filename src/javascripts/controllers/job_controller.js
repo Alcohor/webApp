@@ -31,6 +31,9 @@ const getJobListByPageNo = async () =>{
     let _job_data = await job_model.getJobListData(_pageNO);
     console.log(_job_data)  
     let _job_list = _job_data.result.list;
+    if(_pageNO===1){
+        pageDateArr=[];
+    }
     let _com_id = _job_data.result.ids
     _com_id.forEach(id => {
         _job_list[id].ImgFont = job_model.getImgFont(_job_list[id].ComName);
@@ -60,7 +63,7 @@ const handleScroll = async()=>{
             pull_down_tip_wrap.prop('class','tip-wraper-go')
         }
         _scroll_bottom_sta = false;
-        if ( _job_page_scroll.maxScrollY - y > 0 ) {
+        if ( _job_page_scroll.maxScrollY - y >= 0 ) {
             _scroll_bottom_sta = true;
             console.log( _scroll_bottom_sta)
         }
