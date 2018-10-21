@@ -1,0 +1,32 @@
+
+.createResume-header{
+    line-height: .533333rem;
+    display: flex;
+    background: #ffffff;
+    .go-back{
+        color: #b3b3b3;
+        font-weight: bold;
+        font-size: .533333rem;
+        padding-left: .266667rem;
+        display: inline-block;
+        flex: 1;
+        height: 1.093333rem;
+        line-height: 1.093333rem;
+    }
+    .title{
+        flex: 4;
+        text-align: center;
+        font-size: .426667rem;
+        font-weight: 500;
+        color: #333333;
+    }
+    .header-right{
+        flex: 1;
+        text-align: right;
+        padding-right: .266667rem;
+    }
+}
+.createResume{
+    margin-top: .266667rem;
+    background: #ffffff;
+}

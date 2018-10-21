@@ -4,6 +4,7 @@
 @import './modules/search';
 @import './modules/mine';
 @import './modules/login';
+@import './modules/createResume';
 
 
 body { 
@@ -30,4 +31,8 @@ input{
 .main{
     height: 15.653333rem;
     overflow: hidden;
+}
+
+ul,li{
+    list-style: none;
 }
