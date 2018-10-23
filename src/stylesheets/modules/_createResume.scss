@@ -27,6 +27,64 @@
     }
 }
 .createResume{
-    margin-top: .266667rem;
+    margin-top: .133333rem;
     background: #ffffff;
+    .createResume-write{
+        position: relative;
+        display: block;
+        height: 2.133333rem;
+        background: url("../../static/img/addtype-1.png") .28rem center no-repeat;
+        cursor: pointer;
+        .ct{
+            position: absolute;
+            top: .266667rem;
+            left: 2.666667rem;
+            display: table-cell;
+            height: 2.4rem;
+            vertical-align: middle;
+            color: #666666;
+            line-height: .56rem;
+            .ct-txt{
+                font-size: .426667rem;
+                line-height: .8rem;
+                color: #333333;
+                display: block;
+            }
+            .ct-txt-two{
+                display: block;
+            }
+
+        }
+    }
+}
+.createResume-footer{
+    margin-top: .133333rem;
+    background: #ffffff;
+    .createResume-write{
+        position: relative;
+        display: block;
+        height: 2.133333rem;
+        background: url("../../static/img/addtype-2.png") .28rem center no-repeat;
+        cursor: pointer;
+        .ct{
+            position: absolute;
+            top: .266667rem;
+            left: 2.666667rem;
+            display: table-cell;
+            height: 2.4rem;
+            vertical-align: middle;
+            color: #666666;
+            line-height: .56rem;
+            .ct-txt{
+                font-size: .426667rem;
+                line-height: .8rem;
+                color: #333333;
+                display: block;
+            }
+            .ct-txt-two{
+                display: block;
+            }
+
+        }
+    }
 }
