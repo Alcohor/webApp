@@ -18,7 +18,7 @@ const render = () => {
         alert("请输入验证码！");
         return false;
       } else if (val == num) {
-        alert("提交成功！");
+        alert("验证码提交成功！");
         $(".input-val").val("");
         draw(show_num);
       } else {
