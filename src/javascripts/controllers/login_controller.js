@@ -95,7 +95,8 @@ const render = () => {
   //验证码结束
 
   //登录切换
-  $(".account-login").live("tap", function() {
+  $(".account-login").live("tap", function(e) {
+    e.stopPropagation();
     $(this)
       .addClass("login-active")
       .siblings()
