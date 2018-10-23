@@ -1,0 +1,112 @@
+
+.editResume-header{
+    display: flex;
+    background: #ffffff;
+    .go-back{
+        color: #b3b3b3;
+        font-weight: bold;
+        font-size: .533333rem;
+        padding-left: .266667rem;
+        display: inline-block;
+        flex: 1;
+        height: 1.093333rem;
+        line-height: 1.093333rem;
+    }
+    .title{
+        flex: 4;
+        text-align: center;
+        font-size: .426667rem;
+        font-weight: 500;
+        color: #333333;
+    }
+    .header-right{
+        flex: 1;
+        text-align: right;
+        padding-right: .266667rem;
+    }
+}
+#editsmall{
+    margin-top: .266667rem;
+    .basicInformation{
+        background: #ffffff;
+        padding: 0 .266667rem;
+        .form-section{
+            display: flex;
+            border-bottom: 1px solid #f4f4f4;
+            font-size: .373333rem;
+            .Ifm-name{
+                flex: 2;
+            }
+            input{
+                flex: 5;
+                text-align: right;
+                font-size: .373333rem;
+            }
+            .sexactive{
+                background: #19b497;
+                color: #ffffff;
+                cursor: pointer;
+                line-height: 1.333333rem;
+                margin-right: .133333rem;
+                span{
+                    display: inline-block;
+                    line-height: .56rem;
+                    width: .826667rem;
+                    text-align: center;
+                    border-radius: 2px;
+                    box-shadow: 0 0 1px #b3b3b3 inset;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    .otherInformation{
+        margin-top: .266667rem;
+        background: #ffffff;
+        padding: 0 .266667rem;
+        .form-section{
+            display: flex;
+            border-bottom: 1px solid #f4f4f4;
+            font-size: .373333rem;
+            .Ifm-name{
+                flex: 2;
+            }
+            input{
+                flex: 5;
+                text-align: right;
+                font-size: .373333rem;
+            }
+        }
+    }
+    .self-introduction{
+        margin-top: .266667rem;
+        background: #ffffff;
+        padding: 0 .266667rem;
+        .form-section{
+            display: flex;
+            border-bottom: 1px solid #f4f4f4;
+            font-size: .373333rem;
+            .Ifm-name{
+                flex: 2;
+            }
+            input{
+                flex: 5;
+                text-align: right;
+                font-size: .373333rem;
+            }
+        }
+    }
+    .Ifm-btn{
+        margin: .68rem .266667rem;
+        .btn{
+            width: 100%;
+            display: block;
+            font-size: .426667rem;
+            line-height: 1.066667rem;
+            color: #ffffff;
+            background: #19b497;
+            border-radius: .68rem;
+        }
+    }
+
+}
