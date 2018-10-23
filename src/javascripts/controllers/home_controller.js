@@ -43,6 +43,14 @@ const getJobListByPageNo = async () =>{
     });
 }
 
+//点击事件
+// const job_list_tap=()=>{
+//     $('ul.job-list').on('click','li',function(event){
+//         console.log(this)
+//     })
+// }
+
+
 //滑动
 const handleScroll = async()=>{
     let _job_page_scroll = new BScroll('.main',{
@@ -86,7 +94,7 @@ const handleScroll = async()=>{
             }
             _job_page_scroll.scrollTo(0,-160,300)
         }
-        console.log(_job_page_scroll.maxScrollY - y,_scroll_bottom_sta)
+        
         if(_job_page_scroll.maxScrollY - y == 0 && _scroll_bottom_sta){
             _pageNO ++;
             await getJobListByPageNo();
@@ -100,7 +108,7 @@ const handleScroll = async()=>{
 
 const refreshJobList = async () =>{
     let _job_data = await job_model.getJobListData(_pageNO);
-    console.log(_job_data)  
+     
     let _job_list = _job_data.result.list;
     let _com_id = _job_data.result.ids
     _com_id.forEach(id => {
@@ -115,6 +123,7 @@ const refreshJobList = async () =>{
 const renderJobList =()=>{
     let _template = Handlebars.compile(job_list_template)
     let _html = _template({ _job_list: pageDateArr})
+    console.log(pageDateArr)
     //  渲染job视图
     $('.job-list').html(_html)
 }

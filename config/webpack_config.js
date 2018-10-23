@@ -2,7 +2,8 @@ const webpack_config={
     // mode:'production',
     mode : 'development',
     entry:{
-        app: './src/javascripts/app.js'//入口文件
+        app:'./src/javascripts/app.js',
+        jobInfo_controller:'./src/javascripts/controllers/jobInfo_controller.js'//入口文件
     },
     output:{
         filename:'[name].js'//打包后输出
